@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
                 major number: ${numberList[2]}
             """.trimIndent()
 
+                tvResult.text = "${numberList[0]} < ${numberList[1]} < ${numberList[2]}"
+
             } catch (e: NumberFormatException) {
                 Toast.makeText(this, "Ingrese todos los campos", Toast.LENGTH_SHORT).show()
             }

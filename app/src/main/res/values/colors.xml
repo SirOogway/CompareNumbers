@@ -8,8 +8,10 @@
 
 <!--My Colors-->
     <color name="black">#FF000000</color>
+    <color name="soft_black">#404040</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary">#B1A535</color>
-    <color name="secondary">#D8D593</color>
-    <color name="tertiary">#E7E3BE</color>
+    <color name="primary">#997405</color>
+    <color name="secondary">#B68E16</color>
+    <color name="tertiary">#FBE8AC</color>
+    <color name="gray">#989898</color>
 </resources>
