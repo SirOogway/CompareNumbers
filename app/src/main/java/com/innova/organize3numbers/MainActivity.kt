@@ -25,19 +25,29 @@ class MainActivity : AppCompatActivity() {
                 val b = etNumberTwo.text.toString().toDouble()
                 val c = etNumberThree.text.toString().toDouble()
 
-                val numberList = listOf(a, b, c).sorted()
+                val numberList = listOf(a, b, c)
+                val comparisonSignList = defComparativeSigns(numberList)
 
-                tvResult.text = """
-                minor number: ${numberList[0]}
-                middle number: ${numberList[1]}
-                major number: ${numberList[2]}
-            """.trimIndent()
-
-                tvResult.text = "${numberList[0]} < ${numberList[1]} < ${numberList[2]}"
+                tvResult.text =
+                    "${numberList[0]} ${comparisonSignList[0]} ${numberList[1]} ${comparisonSignList[1]} ${numberList[2]}"
 
             } catch (e: NumberFormatException) {
                 Toast.makeText(this, "Ingrese todos los campos", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+    fun defComparativeSigns(list: List<Double>): Array<String?> {
+        val signList = arrayOfNulls<String>(3)
+        list.forEachIndexed { index, value ->
+            if (index < list.lastIndex) {
+                val nextValue = list[index + 1]
+                signList[index] = when {
+                    value > nextValue -> ">"
+                    value < nextValue -> "<"
+                    else -> "="
+                }
+            }
+        }
+        return signList
     }
 }
