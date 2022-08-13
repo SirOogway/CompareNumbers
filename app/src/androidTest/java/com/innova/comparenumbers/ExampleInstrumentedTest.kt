@@ -1,4 +1,4 @@
-package com.innova.organize3numbers
+package com.innova.comparenumbers
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

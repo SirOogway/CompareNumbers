@@ -1,4 +1,4 @@
-package com.innova.organize3numbers
+package com.innova.comparenumbers
 
 import org.junit.Test
 

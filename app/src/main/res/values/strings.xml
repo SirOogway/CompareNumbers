@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Organize Numbers</string>
+    <string name="app_name">Compare Numbers</string>
     <string name="number_one">Number One</string>
     <string name="number_two">Number Two</string>
     <string name="number_three">Number Three</string>
-    <string name="organize">Organize</string>
+    <string name="compare">Compare</string>
 </resources>

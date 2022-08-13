@@ -1,4 +1,4 @@
-package com.innova.organize3numbers
+package com.innova.comparenumbers
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.innova.comparenumbers.R
 import java.lang.NumberFormatException
 
 class MainActivity : AppCompatActivity() {
@@ -13,11 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var etNumberOne: EditText = findViewById(R.id.etNumberOne)
-        var etNumberTwo: EditText = findViewById(R.id.etNumberTwo)
-        var etNumberThree: EditText = findViewById(R.id.etNumberThree)
+        val etNumberOne: EditText = findViewById(R.id.etNumberOne)
+        val etNumberTwo: EditText = findViewById(R.id.etNumberTwo)
+        val etNumberThree: EditText = findViewById(R.id.etNumberThree)
         val btnOrganize: Button = findViewById(R.id.btnOrganize)
-        var tvResult: TextView = findViewById(R.id.tvResult)
+        val tvResult: TextView = findViewById(R.id.tvResult)
 
         btnOrganize.setOnClickListener {
             try {
@@ -36,7 +37,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    fun defComparativeSigns(list: List<Double>): Array<String?> {
+
+    private fun defComparativeSigns(list: List<Double>): Array<String?> {
         val signList = arrayOfNulls<String>(3)
         list.forEachIndexed { index, value ->
             if (index < list.lastIndex) {
